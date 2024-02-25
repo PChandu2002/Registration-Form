@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: url(images/img.6.avif) ;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+.animate {
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    animation: slidein 3s ease infinite;
+    color: #fff;
+    text-align: center;
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    border: 2px solid rgba(255,255,2550.5);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-box h2{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+
+
+}
+
+.form-box .input-box{
+    position: relative;
+    margin: 25px 0;
+    width: 330px;
+    border-bottom: 2px solid #fff;
+
+}
+
+.form-box  .input-box input{
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 50px 0 5px;
+    color: #fff;
+    font-size: 16px;
+    overflow: auto;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+.btn{
+    color: #fff;
+    background: rgb(201, 68, 222);
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow:  5px 0 10px rgba(0,0,0,0.5);
+
+
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+}
+.group span a{
+    color: #fff;
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.group a:focus{
+    text-decoration: underline;
+}
+
+i{
+    position: absolute;
+    color: #fff;
+    right: 0;
+}
+
+
+#result{
+    color: rgb(167, 179, 34);
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+    
+}
+
+.popup{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: transform .4s,top .4s;
+    visibility: hidden;
+    text-align: center;
+    padding: 0 40px 40px;
+    height: 330px;
+    color: #000;
+}
+
+.popup ion-icon{
+    color: #0f0;
+    font-size: 50px;
+}
+
+.popup button{
+    width: 100%;
+    background: #0f0;
+    padding: 10px 0;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+.popup a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+
+}
+
+.open-slide{
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    visibility: visible;
+
+}
+p{
+    padding: 12px;
+    margin: 2px;
+}
+
+.popup h2{
+    font-weight: 500;
+    font-size: 38px;
+    margin: 30px;
+}
+
+
+@media only screen 
+  and (max-device-width: 720px)  {
+    
+    @keyframes samsungAnimation {
+        0% {
+            
+            transform: scale(0);
+        }
+        100% {
+        
+            transform: scale(1);
+        }
+    }
+
+    .form-box {
+        animation: samsungAnimation 0.5s ease-in-out;
+    }
+
+    .popup {
+        animation: samsungAnimation 0.5s ease-in-out;
+    }
+}
+
+
+@media only screen 
+  and (max-device-width: 414px)  {
+    
+    @keyframes iphoneAnimation {
+        0% {
+            
+            transform: rotate(0);
+        }
+        100% {
+            
+            transform: rotate(360deg);
+        }
+    }
+
+    
+    .form-box {
+        animation: iphoneAnimation 0.5s linear infinite;
+    }
+
+    .popup {
+        animation: iphoneAnimation 0.5s linear infinite;
+    }
+}
+
+
+@media only screen 
+  and (max-device-width: 480px) {
+
+    @keyframes androidAnimation {
+        0% {
+
+            opacity: 0;
+        }
+        100% {
+
+            opacity: 1;
+        }
+    }
+
+    .form-box {
+        animation: androidAnimation 1s ease-in-out;
+    }
+
+    .popup {
+        animation: androidAnimation 1s ease-in-out;
+    }
+}
+
+@media only screen 
+  and (max-device-width: 280px) {
+    
+    @keyframes samsungFoldAnimation {
+        0% {
+        
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+        
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .form-box {
+        animation: samsungFoldAnimation 0.5s ease-in-out;
+    }
+
+    .popup {
+        animation: samsungFoldAnimation 0.5s ease-in-out;
+    }
+}
+
+@keyframes formAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.form-box {
+    animation: formAnimation 1s ease-in-out;
+}
+
+
+@keyframes popupAnimation {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.popup {
+    animation: popupAnimation 0.5s ease-in-out;
+}
+
+
